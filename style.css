@@ -1,0 +1,189 @@
+.traffitJobsContainer {
+  font-family: "Tillium Web", sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.traffitControls {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+.traffitFilterSortContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.traffitRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.traffitPagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.traffitControls label {
+  white-space: nowrap;
+}
+
+.traffitControls select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  flex-grow: 1;
+  min-width: 120px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%23666" d="M8 11.5L3.5 7h9L8 11.5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 30px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.traffitControls select:hover,
+.traffitControls select:focus {
+  cursor: pointer;
+  border-color: #0155fb;
+  box-shadow: 0 0 0 1px #0155fb;
+  color: #0155fb;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%230155fb" d="M8 11.5L3.5 7h9L8 11.5z"/></svg>');
+}
+
+.traffitControls input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  flex-grow: 1;
+  min-width: 120px;
+}
+.traffitControls button {
+  padding: 8px 15px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #0155fb, #387cff, #0155fb) 0 0/300%;
+  transition: background-position 0.5s ease-in-out;
+}
+
+.traffitControls button:hover:not(:disabled) {
+  background-position: 100% 0;
+}
+
+.traffitControls button:disabled {
+  background-color: #cccccc !important;
+  cursor: not-allowed;
+}
+
+#jobListings {
+  min-height: 200px;
+  margin-bottom: 20px;
+}
+
+.jobItem {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 32px;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.jobItem:hover {
+  border-color: #0155fb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.jobItem:hover .newJobTag {
+  background-color: #0155fb;
+  color: white;
+}
+
+.jobItem h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.jobItem p {
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+.jobItem .jobLink {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0155fb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.jobItem .jobLink:hover {
+  text-decoration: underline;
+}
+
+#pageInfo {
+  font-weight: bold;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+#loadingMessage,
+#errorMessage,
+#noResultsMessage {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+#errorMessage {
+  color: #d32f2f;
+}
+
+.newJobTag {
+  display: inline-block;
+  background-color: transparent;
+  color: #0155fb;
+  border: 1px solid #0155fb;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 0.2em 0.6em;
+  border-radius: 0.3em;
+  margin-left: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 610px) {
+  .traffitFilterSortContainer .traffitRow:first-child #searchQueryInput {
+    flex-basis: 100%;
+  }
+
+  .traffitFilterSortContainer .traffitRow:first-child button {
+    flex: 1 1 calc(50% - 5px);
+  }
+}

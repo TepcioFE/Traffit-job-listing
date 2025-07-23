@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="traffitJobsContainer">
+      <div class="traffitControls traffitFilterSortContainer">
+        <div class="traffitRow">
+          <label for="searchQueryInput">Search:</label>
+          <input
+            type="text"
+            id="searchQueryInput"
+            placeholder="Type to start looking"
+          />
+          <button id="applySearch">Apply Search</button>
+          <button id="clearSearch">Clear Search</button>
+        </div>
+        <div class="traffitRow">
+          <label for="sortDirection">Order:</label>
+          <select id="sortDirection">
+            <option value="DESC" selected>Newest to Oldest</option>
+            <option value="ASC">Oldest to Newest</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="jobListings">
+        <p id="loadingMessage">
+          Loading all job listings (this may take a moment)...
+        </p>
+      </div>
+
+      <div class="traffitControls traffitPagination">
+        <button id="prevPage" disabled>Previous</button>
+        <span id="pageInfo">Page 1 of 1</span>
+        <button id="nextPage">Next</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
